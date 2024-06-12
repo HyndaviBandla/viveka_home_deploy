@@ -13,3 +13,31 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+function changeHeaderStyle(event) {
+  const headerDiv = document.querySelector(".navbar");
+  const anchorElements = document.querySelectorAll(".navbar a");
+
+  if (window.scrollY > 250) {
+    headerDiv.style.transition = "color 2s";
+    headerDiv.style.backgroundColor = "#402327";
+  } else {
+    headerDiv.style.transition = "color 2s";
+    headerDiv.style.backgroundColor = "#00000016";
+  }
+}
+
+window.addEventListener("scroll", changeHeaderStyle);
+var checkbox = document.getElementById("check");
+var colorChangeElement = document.querySelector(".navbar");
+var body = document.querySelector("body");
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked) {
+    colorChangeElement.style.transition = "color 2s";
+    colorChangeElement.style.backgroundColor = "#402327";
+    body.style.overflow = "hidden";
+  } else {
+    colorChangeElement.style.transition = "color 2s";
+    colorChangeElement.style.backgroundColor = "#00000016";
+    body.style.overflow = "scroll";
+  }
+});
