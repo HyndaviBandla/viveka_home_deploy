@@ -1,18 +1,3 @@
-let valueDisplays = document.querySelectorAll("#count");
-let interval = 4000;
-
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endvalue);
-  let counter = setInterval(function () {
-    startValue += 1;
-    valueDisplay.textContent = startValue + "+";
-    if (startValue == endvalue) {
-      clearInterval(counter);
-    }
-  }, duration);
-});
 function changeHeaderStyle(event) {
   const headerDiv = document.querySelector(".navbar");
   const anchorElements = document.querySelectorAll(".navbar a");
@@ -40,4 +25,20 @@ checkbox.addEventListener("change", function () {
     colorChangeElement.style.backgroundColor = "#00000016";
     body.style.overflow = "scroll";
   }
+});
+
+let valueDisplays = document.querySelectorAll("#count");
+let interval = 4000;
+
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endvalue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endvalue);
+  let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue + "+";
+    if (startValue == endvalue) {
+      clearInterval(counter);
+    }
+  }, duration);
 });

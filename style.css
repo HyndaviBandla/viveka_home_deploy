@@ -375,7 +375,7 @@ nav .navbar {
 .navbar .menu {
   display: flex;
   align-items: center;
-  margin-right: 6%;
+  /* margin-right: 6%; */
 }
 
 .menu li {
@@ -391,20 +391,20 @@ nav .navbar {
   position: relative;
   padding: 1px 0;
 }
-.submenu a{
+.submenu a {
   content: none;
   transform: scale(0.9);
 }
-.submenu a:hover{
+.submenu a:hover {
   content: none;
   transform: scale(1);
   transition: 0.3s ease-in-out;
 }
-.submenu a:hover:before{
+.submenu a:hover:before {
   content: none;
 }
-.menu li a:before{
-  content: '';
+.menu li a:before {
+  content: "";
   position: absolute;
   height: 3px;
   width: 0%;
@@ -413,7 +413,7 @@ nav .navbar {
   left: 0;
   transition: all 0.5s ease;
 }
-.menu li a:hover:before{
+.menu li a:hover:before {
   width: 100%;
 }
 .submenu {
@@ -433,7 +433,7 @@ nav .navbar {
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
-.submenu li{
+.submenu li {
   margin-bottom: 20px;
 }
 .menu li {
@@ -507,6 +507,11 @@ footer a {
 
 footer div {
   text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -517,7 +522,6 @@ footer div {
   border: none;
   color: white;
 }
-
 
 /* Media Queries */
 
@@ -531,20 +535,20 @@ footer div {
     margin-left: -20px;
     top: 60px;
   }
-  .menu{
+  .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  .navbar .menu li{
+  .navbar .menu li {
     margin-bottom: 0px;
   }
   footer {
     flex-direction: column;
     align-items: center;
   }
-  footer img{
+  footer img {
     height: 200px;
   }
   nav ul li a {
@@ -612,4 +616,18 @@ footer div {
   ul li {
     height: 10px;
   }
+}
+.underline-brown {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-brown::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: rgb(206, 88, 88); /* Color of the underline */
+  bottom: -4px; /* Distance between text and underline */
+  left: 0;
 }
